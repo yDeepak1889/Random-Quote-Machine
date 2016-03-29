@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Quote Machine</title>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="jquery.js"></script>
+
+  	<style type="text/css">
+
+  	</style>
+</head>
+	
+<body class="bg">
+
+	<div class="container-fluid">
+		
+			<div class="row" >
+				<div class="col-md-5 col-md-offset-4" id="quote">
+						<p class="file text-center" id="text">
+							Life is about making an impact,</br> 
+							not making an income.</br>
+
+						<i style="float:right;">-Kevin Kruse</i></br></br>
+							
+						</p>
+							<button class="btn  btn-lg bg" style="float:right;" title="Go To Random Quote">New Quote</button>
+							<a href='#' target="_blank" title="tweet" id="tweet"><button class="btn btn-md bg"><i class="fa fa-twitter fa-2x"></i></button></a>
+				</div>
+
+			</div>
+			<a href = "https://github.com/yDeepak1889" target="_blank"><h4 class="text-center">By: Deepak kumar yadav</h4></a>
+		
+	</div>
+
+
+	<script type="text/javascript">
+	var rand;
+	var qoute_text;
+	var auther;
+	qoute_text = 'Life is about making an impact, not making an income.';
+	auther = '-Kevin Kruse';
+
+	$(document).ready(function(){
+		$(".btn-lg").click(function(){
+			rand = Math.floor(Math.random() * 11);
+			$("#text").animate({opacity:'0'},1000, function(){
+
+
+			$("#text").animate({opacity:'1'},1000);
+
+			switch(rand) {
+				case 1:
+						qoute_text = 'Life is about making an impact, not making an income.';
+						auther = '-Kevin Kruse';
+						$("#text").html( qoute_text +"<i style='float:right;'>" + auther + '</i></br></br>');
+
+						$(".bg").css("background-color","#532AD8");
+						$("#text").css("color", "#532AD8");
+						break;
+				case 2:
+						qoute_text = 'Whatever the mind of man can conceive and believe, it can achieve.';
+						auther = '-Napoleon Hill ';
+						$("#text").html( qoute_text + "</br><i style='float:right;'>" + auther +'</i></br></br>');
+
+						$(".bg").css("background-color","#29F93E");
+						$("#text").css("color", "#29F93E");
+						break;
+				case 3:
+						qoute_text = 'Strive not to be a success, but rather to be of value.';
+						auther = '-Albert Einstein';
+						$("#text").html(qoute_text +"</br><i style='float:right;'>" + auther +"</i></br></br>");
+
+						$(".bg").css("background-color","#F1FD46");
+						$("#text").css("color", "#F1FD46");
+						break;
+				case 4:
+						qoute_text = 'Every strike brings me closer to the next home run.';
+						auther = '-Babe Ruth';
+						$("#text").html(qoute_text + "</br><i style='float:right;'>" + auther+ "</i></br></br>");
+
+						$(".bg").css("background-color","#FF441E");
+						$("#text").css("color", "#FF441E");
+						break;
+				case 5:
+						qoute_text = 'Life isn’t about getting and having, it’s about giving and being.';
+						auther = '-Kevin Kruse';
+
+						$("#text").html(qoute_text + "</br><i style='float:right;'>" + auther + '</i></br></br>');
+
+						$(".bg").css("background-color","#0EE0FF");
+						$("#text").css("color", "#0EE0FF");
+						break;
+				case 6:
+						qoute_text = "We become what we think about.";
+						auther = '-Earl Nightingale';
+
+						$("#text").html(qoute_text + "</br><i style='float:right;'>" + auther + "</i></br></br>");
+
+						$(".bg").css("background-color","#F75FE3");
+						$("#text").css("color", "#F75FE3");
+						break;
+				case 7:
+						qoute_text = 'The mind is everything. What you think you become.';
+						auther = '-Buddha';
+						$("#text").html( qoute_text + "</br><i style='float:right;'>" + auther +"</i></br></br>");
+
+						$(".bg").css("background-color","#E272C4");
+						$("#text").css("color", "#E272C4");
+						break;
+				case 8:
+						qoute_text = 'The best revenge is massive success.';
+						auther = '-Frank Sinatra';
+
+						$("#text").html(qoute_text  + "</br><i style='float:right;'>" +auther+ "</i></br></br>");
+
+						$(".bg").css("background-color","#FF8741");
+						$("#text").css("color", "#FF8741");
+						break;
+				case 9:
+						qoute_text = 'Life shrinks or expands in proportion to one’s courage.';
+						auther = '-Anais Nin';
+
+						$("#text").html(qoute_text  + "</br><i style='float:right;'>" + auther + "</i></br></br>");
+
+						$(".bg").css("background-color","#FA2372");
+						$("#text").css("color", "#FA2372");
+						break;
+				case 10:
+						qoute_text = 'Winning isn’t everything, but wanting to win is.';
+						auther = '-Vince Lombardi';
+
+						$("#text").html(qoute_text  + "</br><i style='float:right;'>" + auther+ "</i></br></br>");
+
+						$(".bg").css("background-color","#C5FC2E");
+						$("#text").css("color", "#C5FC2E");
+						break;
+			}
+			//console.log(qoute_text);
+
+			//qoute_text = $('#text').text();
+		});
+		
+	});
+		$("#tweet").click(function () {
+			$(this).attr('href','https://twitter.com/intent/tweet?related=yDeepak1889&text=' + encodeURIComponent(qoute_text) + encodeURIComponent('   #' +auther));
+		});
+
+	});
+		
+
+		
+	</script>
+
+
+
+
+</body>
+
+</html>
+
