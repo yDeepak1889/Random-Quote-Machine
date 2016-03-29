@@ -1,0 +1,49 @@
+.row{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+.bg{
+	background-color: #70D9EE;
+	opacity: .8;
+}
+
+#text{
+	color: #70D9EE;
+}
+p:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+.file{
+	font-size: 2em;
+}
+
+#quote{
+	border-radius: 6px;
+	border: 2px solid #f3f3f3;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #f3f3f3;
+	box-shadow: 5px 2px 2px #f3f3f3;
+
+}
+
+#text {
+	transition:color 2.5s;
+}
+
+.bg{
+	transition:background-color 2.5s;
+}
+
+button{
+	color:#fff !important;
+}
+button:hover{
+	opacity: .6;
+}
